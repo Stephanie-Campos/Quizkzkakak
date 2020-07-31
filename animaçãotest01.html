@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hello{
+      border: 2px solid grey;
+      transition: all 3s;
+    }
+    .hello-active{
+      border: 2px solid red;
+      background: grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="hello">
+    Ola!
+  </div>
+  <script>
+    const node = document.querySelector('.hello')
+    node.addEventListener('click',function(){
+    this.classList.add('hello-active');
+    });
+    node.addEventListener('transitionend', function(){
+      this.classList.remove('hello-active');
+    });
+  </script>
+</body>
+</html>
